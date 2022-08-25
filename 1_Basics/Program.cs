@@ -1,5 +1,94 @@
-﻿
+﻿Console.WriteLine("You suddenly reach a market place and an old man stairs straight at you");
+Thread.Sleep(1200);
+Console.WriteLine("The man calls you over and forces you to try a new game");
+Thread.Sleep(1200);
+Console.WriteLine("How much are you willing to bet?");
 
+int bet = Convert.ToInt32(Console.ReadLine());
+
+if (bet > 100)
+{
+    Console.WriteLine("WOW! That a lot of money. Well okay then lets play!");
+}
+else
+{
+    Console.WriteLine("Okay lets play!");
+}
+
+Console.WriteLine("We will play a game where you try to guess the right number");
+
+Console.WriteLine("How many x yould you like as a reward?");
+int xBet = Convert.ToInt32(Console.ReadLine());
+
+if (xBet < 5)
+{
+    Console.WriteLine("Okay the bet will be x" + xBet + "\nGuess a number between 1 - 5\n");
+    Thread.Sleep(1000);
+    Console.WriteLine("You have 3 guesses");
+    int guess = 0;
+    Random randomNumbers = new Random(); // random number generator for weapon
+    int betAnswer = randomNumbers.Next(1, 5);
+    Console.WriteLine("Enter a number: ");
+    for (int i = 0; i <= 2; i++)
+    {
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess == betAnswer)
+        {
+            Console.WriteLine("Well done! you win " + bet * xBet + "$ back!");
+        }
+        else
+        {
+            Console.WriteLine("That was wrong you have" + " gusses back!");
+        }
+    }
+}
+else if (xBet == 5)
+{
+    Console.WriteLine("Okay the bet will be x" + xBet + "\nGuess a number between 1 - 10\n");
+    Thread.Sleep(1000);
+    Console.WriteLine("You have 5 guesses");
+    int guess = 0;
+    Random randomNumbers = new Random(); // random number generator for weapon
+    int betAnswer = randomNumbers.Next(1, 10);
+    Console.WriteLine("Enter a number: ");
+    for (int i = 0; i <= 4; i++)
+    {
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess == betAnswer)
+        {
+            Console.WriteLine("Well done! you win " + bet * xBet + "$ back!");
+        }
+        else
+        {
+            Console.WriteLine("Ahahah you lost. Your money is now mine!");
+        }
+    }
+}
+else if (xBet > 5)
+{
+    Console.WriteLine("Okay the bet will be x" + xBet + "\nGuess a number between 1 - 30\n");
+    Thread.Sleep(1000);
+    Console.WriteLine("You have 10 guesses");
+    int guess = 0;
+    Random randomNumbers = new Random(); // random number generator for weapon
+    int betAnswer = randomNumbers.Next(1, 20);
+    Console.WriteLine("Enter a number: ");
+    for (int i = 0; i <= 9; i++)
+    {
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess == betAnswer)
+        {
+            Console.WriteLine("Well done! you win " + bet * xBet + "$ back!");
+        }
+        else
+        {
+            Console.WriteLine("Ahahah you lost. Your money is now mine!");
+        }
+    }
+}
+
+Console.ReadLine();
+return;
 #region 
 //The "#region" can be used to 'collapse' areas of code so you can focus on the key areas
 //Comments can be done in a couple different ways, after // and multiline between /* comment */
@@ -198,7 +287,16 @@ if (StartStory == true)
                         }
 
                         //Flee
+                        if (answer == "flee")
+                        {
+                            Console.WriteLine("You leap towards the window and hear someone screm wait behind you");
+                            Thread.Sleep(1400);
+                            Console.WriteLine("You run throgh the night at suddenly your back at your own village and sleep in fear");
+                            Thread.Sleep(1650);
+                            Console.WriteLine("The next day you quit your job as adventure and retire");
+                            Console.ReadLine();
 
+                        }
                         break;
                     }
 
