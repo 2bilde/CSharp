@@ -482,7 +482,81 @@ if (StartStory == true)
     else if (answer == "straight")
     {
 
+        Console.WriteLine("You walk straight and hear the sound from behind closing in");
+        Thread.Sleep(1200);
+        Console.WriteLine("You come across a highway with multiple cars passing by");
+        Thread.Sleep(1200);
 
+        List<string> cars = new List<string>();
+        cars.Add("yellow");
+        cars.Add("red");
+        cars.Add("green");
+        cars.Add("blue");
+        cars.Add("purple");
+
+
+        Console.WriteLine("Multiple cars in mulitple colors like");
+        foreach (string car in cars)
+        {
+            Console.WriteLine(car);
+            Thread.Sleep(600);
+        }
+        Thread.Sleep(1200);
+        Console.WriteLine("Pass by. Its now or never");
+        Thread.Sleep(1200);
+        Console.WriteLine("You make a run for it");
+        Thread.Sleep(1200);
+        Console.WriteLine(".");
+        Thread.Sleep(1200);
+        Console.WriteLine(".");
+        Thread.Sleep(1200);
+        Console.WriteLine(".");
+        Thread.Sleep(1200);
+        Console.WriteLine("You made it?");
+        Thread.Sleep(1200);
+        Console.WriteLine("How?");
+        Thread.Sleep(1200);
+        Console.WriteLine("I mean great!");
+        Thread.Sleep(1200);
+        Console.WriteLine("But how?");
+        Thread.Sleep(1200);
+        Console.WriteLine("Well let me continue then\n");
+        Thread.Sleep(2400);
+        Console.WriteLine("You turn around and see multiple cars crashed");
+        Thread.Sleep(1200);
+        Console.WriteLine("The colors you see are " + cars[3] + " and " + cars[0]);
+
+        cars.Remove("blue");
+        cars.Remove("yellow");
+
+        Thread.Sleep(1200);
+        Console.WriteLine("A big puddle of blood lays on the road");
+        Thread.Sleep(1200);
+        Console.WriteLine("You notice that people are running out of their cars");
+        Thread.Sleep(1200);
+        Console.WriteLine("You get an idea to steal one. Which one do you pick?\n");
+
+        foreach (string car in cars)
+        {
+            Console.WriteLine(car);
+            Thread.Sleep(600);
+        }
+
+        string pCar;
+        pCar = Console.ReadLine();
+
+        while (!cars.Contains(pCar))
+        {
+            Console.WriteLine("Thats not one of the cars. Try again\n");
+            pCar = Console.ReadLine();
+            break;
+        }
+
+        Console.WriteLine("\n" + pCar + " nice pick");
+        Thread.Sleep(1200);
+        Console.WriteLine("You get in the " + pCar + " car and drive off into the sunset");
+        Console.ReadLine();
+        Console.WriteLine("Thanks for your time " + AName);
         Console.ReadLine();
     }
 
